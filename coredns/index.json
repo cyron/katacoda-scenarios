@@ -1,10 +1,10 @@
 {
-  "title": "coredns",
-  "description": "coredns",
+  "title": "CoreDNSでDNSサーバを構築",
+  "description": "CoreDNSを利用し、DNSサーバを構築する方法を紹介する",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "ステップ1 インストール",
         "text": "step1.md"
       },
       {
@@ -27,6 +27,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "centos7"
+    "imageid": "CentOS 7"
   }
 }
