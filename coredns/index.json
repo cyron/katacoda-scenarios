@@ -23,6 +23,9 @@
       "text": "finish.md"
     }
   },
+  "files": [
+    "Corefile"
+  ],
   "environment": {
     "uilayout": "editor-terminal"
   },
