@@ -9,11 +9,9 @@ CoreDNSのデフォルト設定ファイルは「Corefile」となり、それ�
 <pre class="file" data-filename="Corefile" data-target="replace">. {
     forward . /etc/resolv.conf
 }
+</pre>
 
 # CoreDNSを起動
 上記作成した設定ファイルでDNSサーバを起動する。
 
 `nohup ./coredns -quiet >/dev/null 2>&1 &`{{execute}}
-
-
-</pre>
