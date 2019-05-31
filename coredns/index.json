@@ -16,7 +16,10 @@
       },
       {
         "title": "ステップ3 ドメイン正引き",
-        "text": "step3.md"
+        "text": "step3.md",
+        "files": [
+            "Corefile2"
+        ]
       },
       {
         "title": "ステップ4 ドメイン逆引き",
