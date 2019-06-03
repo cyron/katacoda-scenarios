@@ -42,6 +42,7 @@ node2            IN      A      10.0.2.13
 
 別のターミナルを起動し、ドメイン「master.openshift.example.com」を解決してみましょう。
 
-`dig +noall +answer master.openshift.example.com A`{{execute}}
+`dig +noall +answer master.openshift.example.com A`{{execute T2}}
 
-最後に一つ目のターミナルに戻って、CoreDNSを停止する。
+最後に以下のリンクをクリックし、、CoreDNSを停止する。
+`echo "Stop CoreDNS"`{{execute T1 interrupt}}
