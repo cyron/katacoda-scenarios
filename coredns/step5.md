@@ -1,9 +1,7 @@
 最後に、CoreDNSをSystemdでサービス化する。
+残念ながら、KataCoda上ではSystemdが起動できなさそうだ。。。
 
-CoreDNSのバイナリファイルを「/usr/local/bin」にコピーする。
-
-`cp ./coredns /usr/local/bin/`{{execute}}
-
+# 設定ファイルを修正
 Corefileを以下のように修正する。
 
 <pre class="file" data-filename="Corefile" data-target="replace">
@@ -23,13 +21,18 @@ openshift.example.com {
 }
 </pre>
 
+# バイナリファイルと設定ファイルを配置
+CoreDNSのバイナリファイルを「/usr/local/bin」にコピーする。
+
+`cp ./coredns /usr/local/bin/`{{execute}}
+
 「/etc/coredns」フォルダを作成し、設定ファイルとゾーンファイルをコピーする。
 
 `mkdir /etc/coredns`{{execute}}
 
 `cp Corefile example.zone reverse.zone /etc/coredns`{{execute}}
 
-
+# ユニットファイルを作成
 以下のリンクをクリックし、ユニットファイルを作成する。
 
 `coredns.service`{{open}}
@@ -50,6 +53,7 @@ WantedBy=multi-user.target
 
 `cp coredns.service /etc/systemd/system/`{{execute}}
 
+# サービスを起動
 サービスを有効化し、起動する。
 
 `systemctl enable coredns`{{execute}}
