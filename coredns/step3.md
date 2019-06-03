@@ -5,7 +5,7 @@ Corefileに以下の内容を追記し、ドメイン「openshift.example.com」
 
 <pre class="file" data-filename="Corefile" data-target="append">
 openshift.example.com {
-    file ~/openshift.example.com.db
+    file openshift.example.com.db
 }
 </pre>
 
@@ -36,3 +36,14 @@ openshift.example.com.dbに以下の内容を追記する。
     node2            IN      A      10.0.2.13
 }
 </pre>
+
+# 検証
+上記作成した設定ファイルでDNSサーバを起動する。
+
+`./coredns`{{execute}}
+
+別のターミナルを起動し、ドメイン「master.openshift.example.com」を解決してみましょう。
+
+`dig @localhost +noall +answer master.openshift.example.com A`{{execute}}
+
+最後に一つ目のターミナルに戻って、CoreDNSを停止する。
