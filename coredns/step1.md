@@ -14,5 +14,3 @@
 最後CoreDNSが実行できるかを確認する。
 
 `./coredns -version`{{execute}}
-
-`echo "Open and Execute in Terminal 2"`{{execute T2}}
