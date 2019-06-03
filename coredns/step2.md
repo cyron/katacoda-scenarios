@@ -29,6 +29,8 @@ Corefileに以下の内容を追記し、すべての名前解決を「/etc/reso
 
 次はCoreDNSに対して解決する。
 
-`dig +noall +answer google.com A`{{execute}}
+`dig +noall +answer google.com A`{{execute T2}}
 
-最後に一つ目のターミナルに戻って、CoreDNSを停止する。
+最後にCoreDNSを停止する。
+
+`echo "Send Ctrl+C before running Terminal"`{{execute T1 interrupt}}
