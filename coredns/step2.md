@@ -15,11 +15,9 @@ Corefileに以下の内容を追記し、すべての名前解決を「/etc/reso
 }
 </pre>
 
-`/etc/resolv.conf`{{open}}
+「/etc/resolv.conf」を以下のコマンドで修正し、ローカルホスト(CoreDNS)を参照する。
 
-<pre class="file" data-filename="/etc/resolv.conf" data-target="replace">
-nameserver localhost
-</pre>
+`echo "nameserver localhost" > /etc/resolv.conf`{{execute}}
 
 # CoreDNSを起動
 上記作成した設定ファイルでDNSサーバを起動する。
