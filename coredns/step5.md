@@ -4,12 +4,6 @@ CoreDNSのバイナリファイルを「/usr/local/bin」にコピーする。
 
 `cp ./coredns /usr/local/bin/`{{execute}}
 
-「/etc/coredns」フォルダを作成し、設定ファイルとゾーンファイルをコピーする。
-
-`mkdir /etc/coredns`{{execute}}
-
-`cp Corefile example.zone reverse.zone /etc/coredns`{{execute}}
-
 Corefileを以下のように修正する。
 
 <pre class="file" data-filename="Corefile" data-target="replace">
@@ -28,6 +22,13 @@ openshift.example.com {
     cache
 }
 </pre>
+
+「/etc/coredns」フォルダを作成し、設定ファイルとゾーンファイルをコピーする。
+
+`mkdir /etc/coredns`{{execute}}
+
+`cp Corefile example.zone reverse.zone /etc/coredns`{{execute}}
+
 
 以下のリンクをクリックし、ユニットファイルを作成する。
 
