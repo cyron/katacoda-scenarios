@@ -1,9 +1,17 @@
-以下の手順でCoreDNSを解凍し、実行できるかを確認する。
+以下の手順でCoreDNSをダウンロードし、インストールする。
+
+# ダウンロード
+まずGitHubからCoreDNSのバイナリをダウンロードする。
+<br/>
+`curl -LO https://github.com/coredns/coredns/releases/download/v1.5.0/coredns_1.5.0_linux_amd64.tgz`{{execute}}
 
 # 解凍
-次は解凍し、パスを通す場所に配置する。<br/>
-`tar -zxvf coredns_1.5.0_linux_amd64.tgz`{{execute}}
+次は解凍し、パスを通す場所に配置する。
+
+<br/>
+`tar -zxvf coredns_1.5.0_linux_amd64.tgz -C /usr/local/bin/`{{execute}}
 
 # 確認
-最後CoreDNSが実行できるかを確認する。<br/>
+最後CoreDNSが実行できるかを確認する。
+<br/>
 `coredns -version`{{execute}}
