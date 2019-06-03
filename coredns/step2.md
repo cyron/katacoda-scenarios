@@ -31,6 +31,6 @@ nameserver localhost
 
 次はCoreDNSに対して解決する。
 
-`dig @localhost +noall +answer google.com A`{{execute}}
+`dig +noall +answer google.com A`{{execute}}
 
 最後に一つ目のターミナルに戻って、CoreDNSを停止する。
