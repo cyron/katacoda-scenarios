@@ -3,11 +3,10 @@
 # 正引きゾーンを作成
 Corefileに以下の内容を追記し、ドメイン「openshift.example.com」の名前解決を「openshift.example.com.db」というゾーンファイルに記載する。
 
-<pre class="file" data-filename="Corefile" data-target="append">. {
+<pre class="file" data-filename="Corefile" data-target="append">
     openshift.example.com {
         file ~/openshift.example.com.db
     }
-}
 </pre>
 
 # ゾーンファイルを作成
