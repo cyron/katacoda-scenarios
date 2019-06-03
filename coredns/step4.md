@@ -5,18 +5,18 @@ Corefileに以下の内容を追記し、ドメイン「openshift.example.com」
 
 <pre class="file" data-filename="Corefile" data-target="append">
 10.0.2.0/24 {
-    file 10.0.2.db
+    file reverse.zone
 }
 </pre>
 
 # ゾーンファイルを作成
 以下のリンクをクリックし、ゾーンファイルを作成する。
 
-`10.0.2.db`{{open}}
+`reverse.zone`{{open}}
 
 10.0.2.dbに以下の内容を追記する。
 
-<pre class="file" data-filename="openshift.example.com.db" data-target="append">
+<pre class="file" data-filename="reverse.zone" data-target="replace">
 $TTL 86400
 @    IN SOA dns.openshift.example.com. root.localhost (
                                 2017042745 ; serial
