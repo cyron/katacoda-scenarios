@@ -1,7 +1,7 @@
 CoreDNSのデフォルト設定ファイルは「Corefile」となり、実行するときに「-conf」で指定する必要がある。
 また、DNSサーバをテストするために、digなどのツールをインストール必要がある。
 
-`yum -y install bind-utils`{{execute}}
+`yum -y install bind-utils`{{execute T1}}
 
 # 最小限の設定ファイルを作成
 以下のリンクをクリックし、Corefileを作成する。
@@ -17,12 +17,12 @@ Corefileに以下の内容を追記し、すべての名前解決を「/etc/reso
 
 「/etc/resolv.conf」を以下のコマンドで修正し、ローカルホスト(CoreDNS)を参照する。
 
-`echo "nameserver localhost" > /etc/resolv.conf`{{execute}}
+`echo "nameserver localhost" > /etc/resolv.conf`{{execute T1}}
 
 # CoreDNSを起動
 上記作成した設定ファイルでDNSサーバを起動する。
 
-`./coredns`{{execute}}
+`./coredns`{{execute T1}}
 
 # digで検証
 まず、別のターミナルを起動してください。
