@@ -45,4 +45,5 @@ node2            IN      A      10.0.2.13
 `dig +noall +answer master.openshift.example.com A`{{execute T2}}
 
 最後に以下のリンクをクリックし、、CoreDNSを停止する。
+
 `echo "Stop CoreDNS"`{{execute T1 interrupt}}
