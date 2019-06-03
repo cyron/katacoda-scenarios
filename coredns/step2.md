@@ -31,6 +31,6 @@ Corefileに以下の内容を追記し、すべての名前解決を「/etc/reso
 
 `dig +noall +answer google.com A`{{execute T2}}
 
-最後にCoreDNSを停止する。
+最後以下のリンクをクリックし、CoreDNSを停止する。
 
-`echo "Send Ctrl+C before running Terminal"`{{execute T1 interrupt}}
+`echo "Stop CoreDNS"`{{execute T1 interrupt}}
