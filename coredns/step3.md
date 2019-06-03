@@ -4,9 +4,9 @@
 Corefileに以下の内容を追記し、ドメイン「openshift.example.com」の名前解決を「openshift.example.com.db」というゾーンファイルに記載する。
 
 <pre class="file" data-filename="Corefile" data-target="append">
-    openshift.example.com {
-        file ~/openshift.example.com.db
-    }
+openshift.example.com {
+    file ~/openshift.example.com.db
+}
 </pre>
 
 # ゾーンファイルを作成
@@ -17,7 +17,8 @@ CoreDNSのゾーンファイルの記述方法は、Bindとほぼ同じである
 
 openshift.example.com.dbに以下の内容を追記する。
 
-<pre class="file" data-filename="openshift.example.com.db" data-target="append">. {
+<pre class="file" data-filename="openshift.example.com.db" data-target="append">
+. {
     $TTL 86400
     $ORIGIN openshift.example.com.
     @       IN      SOA     dns root.localhost (
