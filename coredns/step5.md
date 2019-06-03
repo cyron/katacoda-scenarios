@@ -8,21 +8,21 @@ CoreDNSのバイナリファイルを「/usr/local/bin」にコピーする。
 
 `mkdir /etc/coredns`{{execute}}
 
-`cp Corefile openshift.example.com.db 10.0.2.db /etc/coredns`{{execute}}
+`cp Corefile example.zone reverse.zone /etc/coredns`{{execute}}
 
 Corefileを以下のように修正する。
 
 <pre class="file" data-filename="Corefile" data-target="replace">
 openshift.example.com {
-    file /etc/coredns/openshift.example.com.db
+    file /etc/coredns/example.zone
 }
 
 10.0.2.0/24 {
-    file /etc/coredns/10.0.2.db
+    file /etc/coredns/reverse.zone
 }
 
 . {
-    forward . /etc/resolv.conf
+    forward . 8.8.8.8
     log
     errors
     cache
