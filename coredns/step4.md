@@ -38,10 +38,12 @@ $TTL 86400
 # 検証
 上記作成した設定ファイルでDNSサーバを起動する。
 
-`./coredns`{{execute}}
+`./coredns`{{execute T1}}
 
 別のターミナルを起動し、IPアドレス「10.0.2.11」でドメイン「master.openshift.example.com」を逆引きする。
 
-`nslookup 10.0.2.11`{{execute}}
+`nslookup 10.0.2.11`{{execute T2}}
 
-最後に一つ目のターミナルに戻って、CoreDNSを停止する。
+最後に以下のリンクをクリックし、、CoreDNSを停止する。
+
+`echo "Stop CoreDNS"`{{execute T1 interrupt}}
