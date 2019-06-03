@@ -21,7 +21,9 @@ Corefileに以下の内容を追記し、すべての名前解決を「/etc/reso
 `./coredns`{{execute}}
 
 # digで検証
-まず、システムのデフォルト設定で「google.com」をdigで解決する。
+まず、別のターミナルを起動してください。
+
+システムのデフォルト設定で「google.com」をdigで解決する。
 
 `dig +noall +answer google.com A`{{execute}}
 
@@ -29,4 +31,4 @@ Corefileに以下の内容を追記し、すべての名前解決を「/etc/reso
 
 `dig @localhost +noall +answer google.com A`{{execute}}
 
-最後に
+最後に一つ目のターミナルに戻って、CoreDNSを停止する。
