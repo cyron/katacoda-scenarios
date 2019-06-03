@@ -18,7 +18,7 @@ Corefileに以下の内容を追記し、すべての名前解決を「/etc/reso
 # CoreDNSを起動
 上記作成した設定ファイルでDNSサーバを起動する。
 
-`nohup coredns -quiet >/dev/null 2>&1 &`{{execute}}
+`nohup coredns -quiet -conf ~/Corefile >/dev/null 2>&1 &`{{execute}}
 
 # digで検証
 まず、システムのデフォルト設定で「google.com」をdigで解決する。
