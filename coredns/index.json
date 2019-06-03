@@ -29,14 +29,6 @@
     },
     "finish": {
       "text": "finish.md"
-    },
-    "assets": {
-      "host01": [
-        {
-          "file": "coredns_1.5.0_linux_amd64.tgz",
-          "target": "~/"
-        }
-      ]
     }
   },
   "environment": {
