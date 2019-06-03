@@ -1,11 +1,11 @@
 「openshift.example.com」というドメインの正引きレコードを作成する。
 
 # 正引きゾーンを作成
-Corefileに以下の内容を追記し、ドメイン「openshift.example.com」の名前解決を「openshift.example.com.db」というゾーンファイルに記載する。
+Corefileに以下の内容を追記し、ドメイン「openshift.example.com」の名前解決を「example.zone」というゾーンファイルに記載する。
 
 <pre class="file" data-filename="Corefile" data-target="append">
 openshift.example.com {
-    file openshift.example.com.db
+    file example.zone
 }
 </pre>
 
@@ -13,11 +13,11 @@ openshift.example.com {
 CoreDNSのゾーンファイルの記述方法は、Bindとほぼ同じである。
 以下のリンクをクリックし、ゾーンファイルを作成する。
 
-`openshift.example.com.db`{{open}}
+`example.zone`{{open}}
 
-openshift.example.com.dbに以下の内容を追記する。
+example.zoneに以下の内容を追記する。
 
-<pre class="file" data-filename="openshift.example.com.db" data-target="append">
+<pre class="file" data-filename="example.zone" data-target="append">
 . {
     $TTL 86400
     $ORIGIN openshift.example.com.
