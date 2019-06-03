@@ -5,7 +5,7 @@ Corefileに以下の内容を追記し、ドメイン「openshift.example.com」
 
 <pre class="file" data-filename="Corefile" data-target="append">
 10.0.2.0/24 {
-    file /etc/coredns/10.0.2.db
+    file 10.0.2.db
 }
 </pre>
 
