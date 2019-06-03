@@ -11,7 +11,7 @@ openshift.example.com {
 
 # ゾーンファイルを作成
 CoreDNSのゾーンファイルの記述方法は、Bindとほぼ同じである。
-以下のリンクをクリックし、Corefileを作成する。
+以下のリンクをクリックし、ゾーンファイルを作成する。
 
 `openshift.example.com.db`{{open}}
 
