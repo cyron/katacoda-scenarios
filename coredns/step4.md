@@ -42,6 +42,6 @@ $TTL 86400
 
 別のターミナルを起動し、IPアドレス「10.0.2.11」でドメイン「master.openshift.example.com」を逆引きする。
 
-`nslookup localhost 10.0.2.11`{{execute}}
+`nslookup 10.0.2.11`{{execute}}
 
 最後に一つ目のターミナルに戻って、CoreDNSを停止する。
