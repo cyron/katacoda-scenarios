@@ -11,8 +11,14 @@ CoreDNSのデフォルト設定ファイルは「Corefile」となり、実行�
 Corefileに以下の内容を追記し、すべての名前解決を「/etc/resolv.conf」に記載されているDNSサーバ(8.8.8.8)に委譲する。
 
 <pre class="file" data-filename="Corefile" data-target="append">. {
-    forward . /etc/resolv.conf
+    forward . 8.8.8.8
 }
+</pre>
+
+`/etc/resolv.conf`{{open}}
+
+<pre class="file" data-filename="/etc/resolv.conf" data-target="replace">
+nameserver localhost
 </pre>
 
 # CoreDNSを起動
@@ -22,10 +28,6 @@ Corefileに以下の内容を追記し、すべての名前解決を「/etc/reso
 
 # digで検証
 まず、別のターミナルを起動してください。
-
-システムのデフォルト設定で「google.com」をdigで解決する。
-
-`dig +noall +answer google.com A`{{execute}}
 
 次はCoreDNSに対して解決する。
 
