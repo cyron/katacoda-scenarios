@@ -17,24 +17,22 @@ CoreDNSのゾーンファイルの記述方法は、Bindとほぼ同じである
 
 example.zoneに以下の内容を追記する。
 
-<pre class="file" data-filename="example.zone" data-target="append">
-. {
-    $TTL 86400
-    $ORIGIN openshift.example.com.
-    @       IN      SOA     dns root.localhost (
-                                    2017042745 ; serial
-                                    7200       ; refresh (2 hours)
-                                    3600       ; retry (1 hour)
-                                    1209600    ; expire (2 weeks)
-                                    3600       ; minimum (1 hour)
-                                    )
-                                    
-    @                IN      NS     dns
-    dns              IN      A      10.0.2.99
-    master           IN      A      10.0.2.11
-    node1            IN      A      10.0.2.12
-    node2            IN      A      10.0.2.13
-}
+<pre class="file" data-filename="example.zone" data-target="replace">
+$TTL 86400
+$ORIGIN openshift.example.com.
+@       IN      SOA     dns root.localhost (
+                                2017042745 ; serial
+                                7200       ; refresh (2 hours)
+                                3600       ; retry (1 hour)
+                                1209600    ; expire (2 weeks)
+                                3600       ; minimum (1 hour)
+                                )
+
+@                IN      NS     dns
+dns              IN      A      10.0.2.99
+master           IN      A      10.0.2.11
+node1            IN      A      10.0.2.12
+node2            IN      A      10.0.2.13
 </pre>
 
 # 検証
