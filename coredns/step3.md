@@ -38,7 +38,7 @@ node2            IN      A      10.0.2.13
 # 検証
 上記作成した設定ファイルでDNSサーバを起動する。
 
-`./coredns`{{execute}}
+`./coredns`{{execute T1}}
 
 別のターミナルを起動し、ドメイン「master.openshift.example.com」を解決してみましょう。
 
