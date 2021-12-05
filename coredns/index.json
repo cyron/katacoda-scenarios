@@ -35,6 +35,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "centos"
+    "imageid": "ubuntu"
   }
 }
